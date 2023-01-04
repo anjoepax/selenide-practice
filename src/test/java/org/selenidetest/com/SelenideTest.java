@@ -13,7 +13,7 @@ class SelenideTest {
         String searchTerm = "Cheese";
         landingPage.navigateToLandingPage()
                 .searchFor(searchTerm)
-                .checkWhetherSearchResultsContains(20, "Cheese - Wikipedia");
+                .checkWhetherSearchResultsContains(20, searchTerm + " - Wikipedia");
     }
 
     @Test
@@ -21,6 +21,6 @@ class SelenideTest {
         String searchTerm = "Banana";
         landingPage.navigateToLandingPage()
                 .searchFor(searchTerm)
-                .checkWhetherSearchResultsContains(20, "Banana - Wikipedia");
+                .checkWhetherSearchResultsContains(20, searchTerm + " - Wikipedia");
     }
 }
